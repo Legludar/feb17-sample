@@ -29,11 +29,11 @@ class MainViewController: UIViewController {
                         let response = try decoder.decode(SunRiseModel.self, from: data!)
                        
                         DispatchQueue.main.async {
-                            sunriseLabel.text = response.results.sunrise
+                            sunriseLabel.text = "Sunrise: \(response.results.sunrise)"
                             print(response.results.sunrise)
-                            solarnoonLabel.text = response.results.solar_noon
+                            solarnoonLabel.text = "Solar Noon: \(response.results.solar_noon)"
                             print(response.results.solar_noon)
-                            sunsetLabel.text = response.results.sunset
+                            sunsetLabel.text = "Sunset: \(response.results.sunset)"
                             print(response.results.sunset)
                         }
                         
